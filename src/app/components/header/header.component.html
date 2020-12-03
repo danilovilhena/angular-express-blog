@@ -3,7 +3,7 @@
         <img src="./../../../assets/images/blog_logo.png" alt="">
         <nav>
             <ul>
-                <li><a href="/">Início</a></li>
+                <li><a href="/" class="active">Início</a></li>
                 <li><a href="/assuntos">Assuntos</a></li>
                 <li><a href="/sobre">Sobre</a></li>
             </ul>
@@ -12,10 +12,10 @@
 
     <div id="right-side">
         <form action="">
-            <input type="search" placeholder="Buscar" aria-label="Buscar">
-            <button type="submit"><img src="./../../../assets/icons/lupa.svg" alt=""></button>
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+            <a href=""><img src="./../../../assets/icons/lupa.svg" alt=""></a>
         </form>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cadastre-se</button>
+        <button id="login-btn" class="btn" type="submit">Login</button>
+        <button id="register-btn" class="btn" type="submit">Cadastre-se</button>
     </div>
 </header>
