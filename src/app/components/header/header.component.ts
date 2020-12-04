@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isHome = document.location.pathname == '/';
+  isAbout = document.location.pathname.includes('sobre');
+  isTopics = document.location.pathname.includes('assunto');
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { 
 
+  }
 }

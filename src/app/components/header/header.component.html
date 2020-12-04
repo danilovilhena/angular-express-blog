@@ -3,9 +3,9 @@
         <img src="./../../../assets/images/blog_logo.png" alt="">
         <nav>
             <ul>
-                <li><a href="/" class="active">Início</a></li>
-                <li><a href="/assuntos">Assuntos</a></li>
-                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/" [class.active]="isHome">Início</a></li>
+                <li><a href="/assuntos" [class.active]="isTopics">Assuntos</a></li>
+                <li><a href="/sobre" [class.active]="isAbout">Sobre</a></li>
             </ul>
         </nav>
     </div>
