@@ -20,6 +20,7 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
 import { AdminUsersComponent } from './views/admin-users/admin-users.component';
 import { AdminPostsComponent } from './views/admin-posts/admin-posts.component';
 import { WritePostComponent } from './views/write-post/write-post.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { WritePostComponent } from './views/write-post/write-post.component';
     AdminHeaderComponent,
     AdminUsersComponent,
     AdminPostsComponent,
-    WritePostComponent
+    WritePostComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

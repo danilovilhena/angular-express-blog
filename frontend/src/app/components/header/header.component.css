@@ -91,4 +91,12 @@ header{
     #right-side #register-btn:hover{
         background-color: #292929;
     }
-
+    .dropdown-menu.show{
+        border: 2px solid #000000;
+    }
+    .dropdown-divider{
+        border-top: 2px solid #000;
+    }
+    .dropdown-toggle{
+        cursor: pointer;
+    }

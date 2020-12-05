@@ -1,0 +1,75 @@
+main{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+section#author{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+#author img{
+    width: 25%;
+    margin-right: 2rem;
+}
+#author h2{
+    font-weight: bold;
+}
+#author p{
+    font-family: 'Open Sans', sans-serif;
+}
+#author .social-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#author a{
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.375s ease-in-out;
+}
+#author a:hover{
+    color: #292929;
+}
+#author i{
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+/* Artigos */
+#posts{
+    margin-top: 3rem;
+}
+#posts article{
+    display: flex;
+    margin-bottom: 3rem;
+}
+#posts img{
+    object-fit: cover;
+}
+#posts h2{
+    text-transform: uppercase;
+}
+#posts h1{
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+#posts h2, #posts p, #posts a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+#posts p:last-of-type{
+    margin-bottom: 0;
+}
+#posts a{
+    align-self: flex-end;
+}
+#posts div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    width: 100%;
+}

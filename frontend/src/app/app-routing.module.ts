@@ -9,6 +9,7 @@ import { ArticleComponent } from './views/article/article.component';
 import { ForgotPasswordComponent } from './views/forgot-password/forgot-password.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
+import { ProfileComponent } from './views/profile/profile.component';
 import { RegisterComponent } from './views/register/register.component';
 import { TopicsComponent } from './views/topics/topics.component';
 import { WritePostComponent } from './views/write-post/write-post.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "assuntos", component: TopicsComponent},
   {path: "artigo", component: ArticleComponent},
   {path: "write_post", component: WritePostComponent},
+  {path: "profile", component: ProfileComponent},
   {path: "admin/home", component: AdminHomeComponent},
   {path: "admin/usuarios", component: AdminUsersComponent},
   {path: "admin/posts", component: AdminPostsComponent}
