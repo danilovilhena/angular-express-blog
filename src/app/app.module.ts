@@ -14,6 +14,7 @@ import { MainArticleComponent } from './components/main-article/main-article.com
 import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
 import { CardComponent } from './components/card/card.component';
+import { TopicsComponent } from './views/topics/topics.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CardComponent } from './components/card/card.component';
     MainArticleComponent,
     AsideComponent,
     MainComponent,
-    CardComponent
+    CardComponent,
+    TopicsComponent
   ],
   imports: [
     BrowserModule,
