@@ -1,8 +1,29 @@
 <app-header></app-header>
 <section>
-    <div>
+    <div class="my-auto" id="main-div">
         <h1>Bem vindo de volta!</h1>
         <p>Faça o login para aproveitar ao máximo.</p>
+        <form action="">
+            <div class="form-area">
+                <label for="email">Nome de usuário ou e-mail</label>
+                <input type="text" placeholder="Nome de usuário ou e-mail" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-area">
+                <label for="password">Senha</label>
+                <input type="password" placeholder="Senha" id="password" class="form-control" required>
+            </div>
+
+            <div class="bottom-line-area">
+                <div class="checkbox-area">
+                    <input type="checkbox" name="Lembre-se de mim" id="remember-me">
+                    <label for="remember-me">Lembre-se de mim</label>
+                </div>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn" id="submit-btn">Login</button>
+        </form>
     </div>
 </section>
 <app-footer></app-footer>

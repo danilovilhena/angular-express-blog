@@ -1,0 +1,43 @@
+<app-header></app-header>
+<section>
+    <div class="my-auto" id="main-div">
+        <h1>Faça seu cadastro!</h1>
+        <p class="text-center">Preencha os campos abaixo para criar sua conta. Já tem uma conta? <a routerLink="/login">Faça login</a></p>
+        <form action="">
+            <div class="form-area">
+                <label for="name">Nome completo</label>
+                <input type="text" placeholder="Nome completo" id="name" class="form-control" required>
+            </div>
+
+            <div class="form-area">
+                <label for="mail">E-mail</label>
+                <input type="text" placeholder="E-mail" id="mail" class="form-control" required>
+            </div>
+
+            <div class="form-area">
+                <label for="phone">Telefone</label>
+                <input type="text" placeholder="Telefone" id="phone" class="form-control" required>
+            </div>
+
+            <div class="form-area">
+                <label for="password">Senha</label>
+                <input type="password" placeholder="Senha" id="password" class="form-control" required>
+            </div>
+
+            <div class="form-area">
+                <label for="confirm-password">Confirme sua senha</label>
+                <input type="password" placeholder="Confirme sua senha" id="confirm-password" class="form-control" required>
+            </div>
+
+            <div class="bottom-line-area">
+                <div class="checkbox-area">
+                    <input type="checkbox" name="Aceito os termos e condições" id="accept-terms" required>
+                    <label for="accept-terms">Aceito os termos e condições</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn" id="submit-btn">Login</button>
+        </form>
+    </div>
+</section>
+<app-footer></app-footer>
