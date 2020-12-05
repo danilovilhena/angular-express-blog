@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
   isHome = document.location.pathname == '/';
   isAbout = document.location.pathname.includes('sobre');
   isTopics = document.location.pathname.includes('assunto');
-
+  loggedIn = false;
+  
   constructor() { }
 
   ngOnInit(): void { 

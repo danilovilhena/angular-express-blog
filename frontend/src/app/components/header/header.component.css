@@ -68,7 +68,7 @@ header{
         border-radius: 10px;
         box-shadow: none !important;
     }
-    #right-side a{
+    #right-side a:not(.dropdown-item){
         padding-right: 3%;
     }
     #right-side #login-btn{
