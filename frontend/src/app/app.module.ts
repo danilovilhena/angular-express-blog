@@ -18,6 +18,7 @@ import { ArticleComponent } from './views/article/article.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 import { AdminUsersComponent } from './views/admin-users/admin-users.component';
+import { AdminPostsComponent } from './views/admin-posts/admin-posts.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminUsersComponent } from './views/admin-users/admin-users.component';
     ArticleComponent,
     AdminHomeComponent,
     AdminHeaderComponent,
-    AdminUsersComponent
+    AdminUsersComponent,
+    AdminPostsComponent
   ],
   imports: [
     BrowserModule,
