@@ -16,6 +16,8 @@ import { CardComponent } from './components/card/card.component';
 import { TopicsComponent } from './views/topics/topics.component';
 import { ArticleComponent } from './views/article/article.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
+import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
+import { AdminUsersComponent } from './views/admin-users/admin-users.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AdminHomeComponent } from './views/admin-home/admin-home.component';
     CardComponent,
     TopicsComponent,
     ArticleComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    AdminHeaderComponent,
+    AdminUsersComponent
   ],
   imports: [
     BrowserModule,
