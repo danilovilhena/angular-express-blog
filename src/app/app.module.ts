@@ -11,6 +11,9 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ForgotPasswordComponent } from './views/forgot-password/forgot-password.component';
 import { MainArticleComponent } from './components/main-article/main-article.component';
+import { AsideComponent } from './components/aside/aside.component';
+import { MainComponent } from './components/main/main.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MainArticleComponent } from './components/main-article/main-article.com
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    MainArticleComponent
+    MainArticleComponent,
+    AsideComponent,
+    MainComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
