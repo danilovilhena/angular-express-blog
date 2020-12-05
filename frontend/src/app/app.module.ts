@@ -21,6 +21,7 @@ import { AdminUsersComponent } from './views/admin-users/admin-users.component';
 import { AdminPostsComponent } from './views/admin-posts/admin-posts.component';
 import { WritePostComponent } from './views/write-post/write-post.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { ProfileEditComponent } from './views/profile-edit/profile-edit.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ProfileComponent } from './views/profile/profile.component';
     AdminUsersComponent,
     AdminPostsComponent,
     WritePostComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileEditComponent
   ],
   imports: [
     BrowserModule,
