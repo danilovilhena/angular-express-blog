@@ -1,3 +1,4 @@
+# Ajustar a cor dos subtítulos para #1c1c1c (50%)
 # Verificar a semântica do HTML no final da implementação
 # Verificar a acessibilidade da página
 # Verificar a responsividade

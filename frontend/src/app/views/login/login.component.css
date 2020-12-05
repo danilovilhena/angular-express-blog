@@ -1,56 +1,56 @@
-section{
+main{
     width: 100%;
     height: 86.75vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-    section #main-div{
+    main #main-div{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 29%;
     }
-    section h1{
+    main h1{
         font-weight: bold;
     }
-    section p{
+    main p{
         margin-bottom: 3rem;
         font-family: 'Open Sans', sans-serif;
     }
-    section form{
+    main form{
         width: 100%;
     }
-    section label{
+    main label{
         display: block;
         font-weight: bold;
         font-family: 'Open Sans', sans-serif;
         margin-left: 0.25rem;
     }
-    section .form-area, section .checkbox-area{
+    main .form-area, main .checkbox-area{
         margin-bottom: 1.5rem;
     }
-    section .form-area input{
+    main .form-area input{
         background-color: #F8F8F8;
         border-color: #F8F8F8;
         height: 3.5rem;
         font-family: 'Open Sans', sans-serif;
     }
-    section .checkbox-area{
+    main .checkbox-area{
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    section .checkbox-area label{
+    main .checkbox-area label{
         display: inline-block;
         margin-bottom: 0;
     }
-    section .bottom-line-area{
+    main .bottom-line-area{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    section #submit-btn{
+    main #submit-btn{
         width: 100%;
         border-radius: 10px;
         padding-top: 2%;
@@ -60,7 +60,7 @@ section{
         background-color: #ffffff;
         transition: all 0.375s ease-in-out;
     }
-    section #submit-btn:hover{
+    main #submit-btn:hover{
         color: #ffffff;
         background-color: #292929;
     }

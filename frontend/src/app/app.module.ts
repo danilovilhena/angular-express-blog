@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './views/about/about.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
@@ -16,13 +15,13 @@ import { MainComponent } from './components/main/main.component';
 import { CardComponent } from './components/card/card.component';
 import { TopicsComponent } from './views/topics/topics.component';
 import { ArticleComponent } from './views/article/article.component';
+import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
     AboutComponent,
     LoginComponent,
     RegisterComponent,
@@ -32,7 +31,8 @@ import { ArticleComponent } from './views/article/article.component';
     MainComponent,
     CardComponent,
     TopicsComponent,
-    ArticleComponent
+    ArticleComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,

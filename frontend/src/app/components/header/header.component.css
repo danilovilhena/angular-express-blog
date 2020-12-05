@@ -82,6 +82,7 @@ header{
         background-color: #292929;
     }
     #right-side #register-btn{
+        font-weight: bold;
         color: #ffffff;
         background-color: #000000;
         border: 3px solid #000000;
