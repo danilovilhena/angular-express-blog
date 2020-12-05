@@ -15,6 +15,7 @@ import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
 import { CardComponent } from './components/card/card.component';
 import { TopicsComponent } from './views/topics/topics.component';
+import { ArticleComponent } from './views/article/article.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TopicsComponent } from './views/topics/topics.component';
     AsideComponent,
     MainComponent,
     CardComponent,
-    TopicsComponent
+    TopicsComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
