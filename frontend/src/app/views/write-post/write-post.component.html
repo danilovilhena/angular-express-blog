@@ -1,0 +1,32 @@
+<app-header></app-header>
+<main>
+    <div class="my-auto" id="main-div">
+        <h1 class="text-left w-100">Escrever um post</h1>
+        <form action="">
+            <div class="form-area">
+                <label for="email">Título</label>
+                <input type="text" placeholder="Título" id="email" class="form-control" required>
+            </div>
+            <div class="form-area">
+                <label for="description">Descrição</label>
+                <textarea name="Descrição" placeholder="Descrição" id="description" rows="10" required></textarea>
+            </div>
+            <div class="form-area">
+                <label for="assuntos">Assuntos</label>
+                <select class="selectpicker w-100" multiple data-live-search="true" title="Nenhum assunto selecionado">
+                    <option>Tecnologia</option>
+                    <option>Javascript</option>
+                    <option>SCSS</option>
+                </select>
+            </div>
+            <div class="form-area">
+                <label for="image">Imagem (URL)</label>
+                <input type="text" placeholder="Imagem" id="image" class="form-control" required>
+            </div>
+            <div id="buttons-div">
+                <button type="submit" class="btn" id="clear-btn">Limpar</button>
+                <button type="submit" class="btn" id="submit-btn">Postar</button>
+            </div>
+        </form>
+    </div>
+</main>

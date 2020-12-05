@@ -1,0 +1,101 @@
+main{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    main #main-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 29%;
+    }
+    main h1{
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+    main p{
+        margin-bottom: 3rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+    main form{
+        width: 100%;
+    }
+    main label{
+        display: block;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 0.25rem;
+    }
+    main .form-area, main .checkbox-area{
+        margin-bottom: 1.5rem;
+    }
+    main .form-area input{
+        background-color: #F8F8F8;
+        border-color: #F8F8F8;
+        height: 3.5rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+    main #description{
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #F8F8F8;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-clip: padding-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        border: none;
+        outline: none;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    main #description:focus{
+        border: none;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    main #description:active{
+        border: none;
+        outline: none;
+    }
+
+    main .btn{
+        width: 20%;
+        border-radius: 10px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-weight: bold;
+        border: 3px solid #000000;
+        
+        transition: all 0.375s ease-in-out;
+    }
+    main #submit-btn{
+        background-color: #000000;
+        color: #ffffff;
+    }
+    main #submit-btn:hover{
+        color: #ffffff;
+        background-color: #292929;
+    }
+    main #clear-btn{
+        background-color: #ffffff;
+        color: #000000;
+        margin-right: 1rem;
+    }
+    main #clear-btn:hover{
+        color: #ffffff;
+        background-color: #292929;
+    }
+    
+
+#buttons-div{
+    display: flex;
+    justify-content: flex-end;
+}

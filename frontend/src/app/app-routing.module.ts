@@ -11,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { TopicsComponent } from './views/topics/topics.component';
+import { WritePostComponent } from './views/write-post/write-post.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: "forgot_password", component: ForgotPasswordComponent},
   {path: "assuntos", component: TopicsComponent},
   {path: "artigo", component: ArticleComponent},
+  {path: "write_post", component: WritePostComponent},
   {path: "admin/home", component: AdminHomeComponent},
   {path: "admin/usuarios", component: AdminUsersComponent},
   {path: "admin/posts", component: AdminPostsComponent}
