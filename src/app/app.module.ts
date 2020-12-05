@@ -10,6 +10,7 @@ import { AboutComponent } from './views/about/about.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ForgotPasswordComponent } from './views/forgot-password/forgot-password.component';
+import { MainArticleComponent } from './components/main-article/main-article.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ForgotPasswordComponent } from './views/forgot-password/forgot-password
     AboutComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    MainArticleComponent
   ],
   imports: [
     BrowserModule,

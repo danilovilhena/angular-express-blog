@@ -1,0 +1,34 @@
+section{
+    width: 98%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    border: 4px solid #000000;
+    height: 10% !important;
+}
+div{
+    padding-left: 3%;
+    padding-right: 10%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 4px solid #000000;
+}
+h2{
+    text-transform: uppercase;
+}
+h1{
+    font-weight: bold;
+}
+h2,p{
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    align-self: flex-end;
+}
+img{
+    object-fit: cover;
+    width: 45%;
+}
