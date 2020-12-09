@@ -17,12 +17,12 @@ var userSchema = new Schema({
     site: {type: String, required: false},
 })
 
-userSchema.statics.hashPassword = (password) => {
-    return bcrypt.hashSync(password, 10)
+userSchema.statics.hashPassword = function hashPassword(password){
+    return bcrypt.hashSync(password,10);
 }
 
-userSchema.methods.isValid = (hashedPassword) => {
-    return bcrypt.compareSync(hashedPassword, this.password)
+userSchema.methods.isValid = function(hashedpassword){
+    return bcrypt.compareSync(hashedpassword, this.password);
 }
 
 module.exports = mongoose.model('User', userSchema)

@@ -64,3 +64,6 @@ main{
         color: #ffffff;
         background-color: #292929;
     }
+    .invalid{
+        border: 3px solid #ea0000 !important;
+    }
