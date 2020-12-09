@@ -3,13 +3,19 @@ var router = express.Router();
 
 var User = require('../models/user')
 
+// Registrar novo usuário
 router.post('/register', function(req,res,next) {
   var user = new User({
     name: req.body.name,
     email: req.body.email,
     password: User.hashPassword(req.body.password),
     phone: req.body.phone,
-    creation_date: Date.now()
+    creation_date: Date.now(),
+    description: "",
+    linkedin: "",
+    instagram: "",
+    github: "",
+    site: "",
   })
 
   let promise = user.save()

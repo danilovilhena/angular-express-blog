@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
           }, 2500);
         },
         (error) => {
-          this.submitMessage = "Ocorreu um erro, tente novamente."
+          this.submitMessage = "Ocorreu um erro no cadastro."
         }
       )
     } else{

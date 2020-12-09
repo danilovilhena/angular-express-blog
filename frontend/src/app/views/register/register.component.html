@@ -37,7 +37,7 @@
             </div>
 
             <button type="submit" class="btn mb-3 " id="submit-btn" (click)="register()">Cadastrar-se</button>
-            <div class="alert" [class.d-none]="submitMessage == ''" [class.alert-success]="submitMessage.includes('Cadastro')" [class.alert-danger]="submitMessage.includes('erro')" role="alert">
+            <div class="alert" [class.d-none]="submitMessage == ''" [class.alert-success]="submitMessage.includes('Cadastro')" [class.alert-danger]="submitMessage.includes('erro')" role="alert" style="font-family: 'Open Sans', sans-serif;">
                 {{submitMessage}}
             </div>
         </form>
