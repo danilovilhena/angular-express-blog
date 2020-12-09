@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +24,8 @@ import { AdminPostsComponent } from './views/admin-posts/admin-posts.component';
 import { WritePostComponent } from './views/write-post/write-post.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { ProfileEditComponent } from './views/profile-edit/profile-edit.component';
+
+import { BackendService } from './services/backend.service';
 
 @NgModule({
   declarations: [
@@ -48,9 +52,12 @@ import { ProfileEditComponent } from './views/profile-edit/profile-edit.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,26 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+var User = require('../models/user')
+
+router.post('/register', function(req,res,next) {
+  var user = new User({
+    name: req.body.name,
+    email: req.body.email,
+    password: User.hashPassword(req.body.password),
+    phone: req.body.phone,
+    creation_date: Date.now()
+  })
+
+  let promise = user.save()
+
+  promise.then(function(doc) {
+    return res.status(201).json(doc)
+  })
+
+  promise.catch(function(err) {
+    return res.status(501).json({message: "Error registering user."})
+  })
+})
 
 module.exports = router;

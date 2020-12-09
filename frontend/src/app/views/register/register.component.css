@@ -38,6 +38,9 @@ main{
         height: 3.5rem;
         font-family: 'Open Sans', sans-serif;
     }
+    .invalid{
+        border: 3px solid #ea0000 !important;
+    }
     main .checkbox-area{
         display: flex;
         flex-direction: row;
