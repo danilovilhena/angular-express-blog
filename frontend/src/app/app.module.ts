@@ -14,7 +14,6 @@ import { ForgotPasswordComponent } from './views/forgot-password/forgot-password
 import { MainArticleComponent } from './components/main-article/main-article.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
-import { CardComponent } from './components/card/card.component';
 import { TopicsComponent } from './views/topics/topics.component';
 import { ArticleComponent } from './views/article/article.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
@@ -39,7 +38,6 @@ import { BackendService } from './services/backend.service';
     MainArticleComponent,
     AsideComponent,
     MainComponent,
-    CardComponent,
     TopicsComponent,
     ArticleComponent,
     AdminHomeComponent,

@@ -2,21 +2,22 @@
 <main>
     <section id="author">
         <img src="https://ui-avatars.com/api/?name=${{encode(user.name)}}&background=random&rounded=true">
-        <div>
+        <div class="w-100">
             <div class="info-div">
                 <h2>{{user.name}}</h2>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
+                <p *ngIf="user.description != ''">{{user.description}}</p>
+                <p *ngIf="user.description == ''">O usuário não escreveu uma descrição ainda.</p>
             </div>
             <div class="social-div">
-                <a href="arthurblack.com"><i class="fas fa-link"></i>arthurblack.com</a>
+                <a *ngIf="user.site != ''" href="{{'http://' + user.site}}" target="_blank"><i class="fas fa-link"></i>{{user.site}}</a>
                 <div>
-                    <a href="https://github.com/danilovilhena">
+                    <a href="{{'http://' + user.github}}" target="_blank">
                         <i class="fab fa-github-square" title="Logomarca do Github"></i>
                     </a>
-                    <a href="https://www.instagram.com/_danilovilhena/">
+                    <a href="{{'http://' + user.instagram}}" target="_blank">
                         <i class="fab fa-instagram" title="Logomarca do Instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/danilo-vilhena-4b150b1b0/">
+                    <a href="{{'http://' + user.linkedin}}" target="_blank">
                         <i class="fab fa-linkedin" title="Logomarca do Linkedin"></i>
                     </a>
                 </div>

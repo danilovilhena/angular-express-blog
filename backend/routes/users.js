@@ -17,6 +17,18 @@ router.get('/get', async (req, res) => {
   }
 });
 
+// Pegar um usuário pelo ID
+router.get('/get_id/:id', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id)
+
+    if (!user) res.status(404).send("Nenhum usuário encontrado.")
+    res.status(200).send(user)
+  } catch (err) {
+    res.status(501).json({message: "E-mail já cadastrado."})
+  }
+})
+
 // Remover um usuário
 router.delete('/delete/:id', async (req, res) => {
   try {

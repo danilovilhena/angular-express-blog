@@ -14,6 +14,18 @@ export class BackendService {
     })
   }
 
+  getUserById(id: string){
+    return this._http.get(`http://localhost:3000/users/get_id/${id}`, {
+      observe: 'body'
+    })
+  }
+
+  alterUser(id: string, body: any){
+    return this._http.patch(`http://localhost:3000/users/patch/${id}`, body, {
+      observe: 'body'
+    })
+  }
+
   removeUser(id: string){
     return this._http.delete(`http://localhost:3000/users/delete/${id}`)
   }

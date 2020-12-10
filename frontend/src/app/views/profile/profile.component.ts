@@ -20,6 +20,16 @@ export class ProfileComponent implements OnInit {
       },
       error => this._router.navigate(['/login'])
     )
+
+    setTimeout(() => {
+      this._backendService.getUserById(this.user._id)
+      .subscribe(
+        data => {
+          this.user = data
+        },
+        error => console.log(error)
+      )
+    }, 100);
   }
 
   ngOnInit(): void {
@@ -28,5 +38,4 @@ export class ProfileComponent implements OnInit {
   encode(str: string){
     return encodeURIComponent(str)
   }
-
 }

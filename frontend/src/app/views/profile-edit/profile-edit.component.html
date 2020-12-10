@@ -2,22 +2,22 @@
 <main>
     <div class="my-auto" id="main-div">
         <h1 class="text-left w-100">Configurações</h1>
-        <form action="">
+        <form [formGroup]="profileForm">
             <div class="form-area">
                 <label for="name">Nome</label>
-                <input type="text" placeholder="Nome" id="name" class="form-control" required>
+                <input formControlName="name" type="text" placeholder="Nome" id="name" class="form-control" required>
             </div>
             <div class="form-area">
                 <label for="email">E-mail</label>
-                <input type="text" placeholder="E-mail" id="email" class="form-control" required>
+                <input formControlName="email" type="text" placeholder="E-mail" id="email" class="form-control" [class.invalid]="isValid('email')" required>
             </div>
             <div class="form-area">
                 <label for="phone">Telefone</label>
-                <input type="text" placeholder="Telefone" id="phone" class="form-control" required>
+                <input formControlName="phone" type="text" placeholder="Telefone" id="phone" class="form-control" [class.invalid]="isValid('phone')" required>
             </div>
             <div class="form-area">
                 <label for="description">Descrição</label>
-                <textarea name="Descrição" placeholder="Descrição" id="description" rows="10" required></textarea>
+                <textarea formControlName="description" name="Descrição" placeholder="Descrição" id="description" rows="10" required></textarea>
             </div>
 
             <label>Redes sociais</label>
@@ -25,27 +25,50 @@
                 <label for="linkedin">
                     <i class="fab fa-linkedin" title="Logomarca do Linkedin"></i>
                 </label>
-                <input type="text" placeholder="Linkedin" id="linkedin" class="form-control" required>
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-md" style="font-family: 'Open Sans', sans-serif;">linkedin.com/</span>
+                    </div>
+                    <input formControlName="linkedin" type="text" class="form-control" placeholder="Linkedin" id="linkedin">
+                </div>
             </div>
             <div class="form-area social-media">
                 <label for="instagram">
                     <i class="fab fa-instagram" title="Logomarca do Instagram"></i>
                 </label>
-                <input type="text" placeholder="Instagram" id="instagram" class="form-control" required>
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-md" style="font-family: 'Open Sans', sans-serif;">instagram.com/</span>
+                    </div>
+                    <input formControlName="instagram" type="text" class="form-control" placeholder="Instagram" id="instagram">
+                </div>
             </div>
             <div class="form-area social-media">
                 <label for="github">
                     <i class="fab fa-github-square" title="Logomarca do Github"></i>
                 </label>
-                <input type="text" placeholder="Github" id="github" class="form-control" required>
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-md" style="font-family: 'Open Sans', sans-serif;">github.com/</span>
+                    </div>
+                    <input formControlName="github" type="text" class="form-control" placeholder="Github" id="github">
+                </div>
             </div>
             <div class="form-area social-media">
                 <label for="site"><i class="fas fa-link"></i></label>
-                <input type="text" placeholder="Site" id="site" class="form-control" required>
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-md" style="font-family: 'Open Sans', sans-serif;">http://</span>
+                    </div>
+                    <input formControlName="site" type="text" class="form-control" placeholder="Site" id="site">
+                </div>
             </div>
-            <div id="buttons-div">
-                <button type="submit" class="btn" id="clear-btn">Descartar</button>
-                <button type="submit" class="btn" id="submit-btn">Salvar</button>
+            <div id="buttons-div" class="mb-3">
+                <button type="submit" class="btn" id="clear-btn" (click)="reset()">Descartar</button>
+                <button type="submit" class="btn" id="submit-btn" (click)="save()">Salvar</button>
+            </div>
+            <div class="alert" [class.d-none]="submitMessage == ''" [class.alert-success]="submitMessage.includes('sucesso')" [class.alert-danger]="!submitMessage.includes('sucesso')" role="alert" style="font-family: 'Open Sans', sans-serif;">
+                {{submitMessage}}
             </div>
         </form>
     </div>

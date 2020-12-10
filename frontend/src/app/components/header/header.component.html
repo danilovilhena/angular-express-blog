@@ -23,12 +23,12 @@
 
     <ng-template #elseTemplate>
         <div id="left-side">
-            <img src="./../../../assets/images/blog_logo.png">
+            <img routerLink="/" src="./../../../assets/images/blog_logo.png">
             <nav>
                 <ul>
-                    <li><a href="/" [class.active]="isHome">Início</a></li>
-                    <li><a href="/assuntos" [class.active]="isTopics">Assuntos</a></li>
-                    <li><a href="/sobre" [class.active]="isAbout">Sobre</a></li>
+                    <li><a routerLink="/" [class.active]="isHome">Início</a></li>
+                    <li><a routerLink="/assuntos" [class.active]="isTopics">Assuntos</a></li>
+                    <li><a routerLink="/sobre" [class.active]="isAbout">Sobre</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +42,7 @@
             <div class="dropdown">
                 <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://ui-avatars.com/api/?name=${{encode(user.name)}}&background=random&rounded=true" width="50">
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item mb-0" href="#"><b>{{user.name}}</b></a>
+                    <a class="dropdown-item mb-0" routerLink="/profile"><b>{{user.name}}</b></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" routerLink="/profile">Meu perfil</a>
                     <a class="dropdown-item" routerLink="/write_post">Escrever um post</a>
