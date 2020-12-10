@@ -9,7 +9,6 @@ import { BackendService } from 'src/app/services/backend.service';
   styleUrls: ['./profile-edit.component.css']
 })
 export class ProfileEditComponent implements OnInit {
-
   profileForm: FormGroup;
   user: any;
   submitMessage = ''
@@ -39,7 +38,7 @@ export class ProfileEditComponent implements OnInit {
         this.profileForm.get('github')?.setValue(this.user.github)
         this.profileForm.get('site')?.setValue(this.user.site)
       },
-      error => console.log(error)
+      error => this._router.navigate(['/login'])
     )
 
     setTimeout(() => {
