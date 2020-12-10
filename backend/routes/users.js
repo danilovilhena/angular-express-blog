@@ -5,8 +5,42 @@ const crypto = require('crypto')
 var router = express.Router()
 var User = require('../models/user')
 var secret = crypto.randomBytes(20).toString('hex');
+var decodedToken = ''
 
-// Registrar novo usuário
+// Pegar todos os usuários
+router.get('/get', async (req, res) => {
+  const users = await User.find({});
+  try {
+    res.status(200).send(users);
+  } catch (err) {
+    res.status(501).send(err);
+  }
+});
+
+// Remover um usuário
+router.delete('/delete/:id', async (req, res) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id)
+
+    if (!user) res.status(404).send("Nenhum usuário encontrado.")
+    res.status(200).send()
+  } catch (err) {
+    res.status(501).json({message: "E-mail já cadastrado."})
+  }
+})
+
+// Alterar um usuário
+router.patch('/patch/:id', async (req, res) => {
+  try {
+    await User.findByIdAndUpdate(req.params.id, req.body)
+    await User.save()
+    res.status(200).send()
+  } catch (err) {
+    res.status(501).send(err)
+  }
+})
+
+// Registrar um usuário
 router.post('/register', function(req,res,next) {
   var user = new User({
     name: req.body.name,
@@ -28,18 +62,18 @@ router.post('/register', function(req,res,next) {
   })
 
   promise.catch(function(err) {
-    return res.status(501).json({message: "Ocorreu um erro, tente novamente."})
+    return res.status(501).send(err)
   })
 })
 
-// Logar um usuário existente
+// Logar um usuário 
 router.post('/login', function(req, res, next) {
   let promise = User.findOne({email: req.body.email}).exec()
 
   promise.then(function(doc) {
     if(doc){
       if(doc.isValid(req.body.password)){
-        let token = jwt.sign({email: doc.email}, secret, {expiresIn: '2h'});
+        let token = jwt.sign({user: doc}, secret, {expiresIn: '2h'});
         
         return res.status(200).json(token)
       } else {
@@ -57,11 +91,11 @@ router.post('/login', function(req, res, next) {
 
 // Informações do usuário logado
 router.get('/user', verifyToken, function(req, res, next) {
-  return res.status(200).json(decodedToken.email)
+  return res.status(200).json(decodedToken.user)
 })
 
-var decodedToken = ''
 
+// Outras funções 
 function verifyToken(req,res,next){
   let token = req.query.token;
 

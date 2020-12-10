@@ -66,10 +66,10 @@ export class RegisterComponent implements OnInit {
           this.submitMessage = "Cadastro feito com sucesso!"
           setTimeout(() => {
             this._router.navigate(['/login'])
-          }, 2500);
+          }, 1500);
         },
         (error) => {
-          this.submitMessage = "Ocorreu um erro no cadastro."
+          this.submitMessage = "E-mail já cadastrado."
         }
       )
     } else{
@@ -79,6 +79,7 @@ export class RegisterComponent implements OnInit {
           checkbox.style.removeProperty('outline')
         })
       }
+      this.submitMessage = 'Preencha todos os campos acima.'
       Object.keys(this.registerForm.controls).forEach(field => {
         this.registerForm.get(field)?.markAsTouched({ onlySelf: true })
       });

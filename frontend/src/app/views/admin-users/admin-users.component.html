@@ -1,52 +1,15 @@
 <app-admin-header></app-admin-header>
 <main>
     <h1>Usuários</h1>
-    <section>
-        <img src="./../../../assets/images/user.png">
-        <div>
-            <div class="info-div">
-                <h2>Antônio Silva</h2>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
+    <section *ngFor="let user of users" class="mb-5">
+        <div class="info-div">
+            <img src='https://ui-avatars.com/api/?name=${{encode(user.name)}}&background=random&rounded=true'>
+            <div>
+                <h2>{{user.name}}</h2>
+                <p><b>E-mail:</b> {{user.email}} | <b>Telefone:</b> {{user.phone}}</p>
             </div>
         </div>
+        <button class="btn" (click)="removeUser(user._id)">Excluir</button>
     </section>
-    <section>
-        <img src="./../../../assets/images/user.png">
-        <div>
-            <div class="info-div">
-                <h2>Antônio Silva</h2>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <img src="./../../../assets/images/user.png">
-        <div>
-            <div class="info-div">
-                <h2>Antônio Silva</h2>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <img src="./../../../assets/images/user.png">
-        <div>
-            <div class="info-div">
-                <h2>Antônio Silva</h2>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
+    
 </main>

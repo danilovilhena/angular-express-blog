@@ -22,7 +22,10 @@
                 <a routerLink="/forgot_password">Esqueceu a senha?</a>
             </div>
 
-            <button type="submit" class="btn" id="submit-btn" (click)="login()">Login</button>
+            <button type="submit" class="btn mb-3" id="submit-btn" (click)="login()">Login</button>
+            <div class="alert" [class.d-none]="submitMessage == ''" [class.alert-success]="submitMessage.includes('sucesso')" [class.alert-danger]="!submitMessage.includes('sucesso')" role="alert" style="font-family: 'Open Sans', sans-serif;">
+                {{submitMessage}}
+            </div>
         </form>
     </div>
 </main>

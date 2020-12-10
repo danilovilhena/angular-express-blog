@@ -1,5 +1,5 @@
 <header>
-    <ng-container *ngIf="loggedIn; else elseTemplate">
+    <ng-container *ngIf="!loggedIn; else elseTemplate">
         <div id="left-side">
             <img src="./../../../assets/images/blog_logo.png">
             <nav>
@@ -42,13 +42,12 @@
             <div class="dropdown">
                 <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../assets/images/user.png" width="50">
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item mb-0" href="#"><b>Antônio Silva</b></a>
-                    <a class="dropdown-item disabled" href="#">@antonio_silva</a>
+                    <a class="dropdown-item mb-0" href="#"><b>{{user.name}}</b></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Meu perfil</a>
+                    <a class="dropdown-item" routerLink="/profile">Meu perfil</a>
                     <a class="dropdown-item" routerLink="/write_post">Escrever um post</a>
                     <a class="dropdown-item" routerLink="/profile/edit">Configurações</a>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <a class="dropdown-item" (click)="logout()" style="cursor: pointer;">Sair</a>
                     
                 </div>
             </div>

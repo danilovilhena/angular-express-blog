@@ -8,6 +8,16 @@ export class BackendService {
 
   constructor(private _http: HttpClient) { }
 
+  getAllUsers(){
+    return this._http.get('http://localhost:3000/users/get', {
+      observe: 'body'
+    })
+  }
+
+  removeUser(id: string){
+    return this._http.delete(`http://localhost:3000/users/delete/${id}`)
+  }
+
   registerUser(body: any){
     return this._http.post('http://localhost:3000/users/register', body, {
       observe: 'body'

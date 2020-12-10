@@ -14,6 +14,7 @@ section{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
 }
@@ -22,10 +23,15 @@ h2{
 }
 p{
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
 }
 img{
-    width: 30%;
+    width: 72px;
+    height: 72px;
     margin-right: 1rem;
+}
+.info-div{
+   display: flex;
 }
 .buttons-div{
     display: flex;
@@ -42,7 +48,6 @@ button{
     padding-bottom: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-bottom: 3rem;
 }
 button:first-of-type{
     margin-left: 1rem;

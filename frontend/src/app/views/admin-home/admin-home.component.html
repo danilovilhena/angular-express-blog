@@ -2,8 +2,9 @@
 <main>
     <div id="data">
         <div class="data-line">
-            <p class="data-number">04</p>
-            <p>usuários cadastrados</p>
+            <p class="data-number">{{ (users.length).toLocaleString(undefined, {minimumIntegerDigits: 2}) }}</p>
+            <p *ngIf="users.length != 1">usuários cadastrados</p>
+            <p *ngIf="users.length == 1">usuário cadastrado</p>
         </div>
         <div class="data-line">
             <p class="data-number">20</p>
@@ -15,7 +16,7 @@
         </div>
     </div>
     <div id="buttons">
-        <button class="btn">Ver os usuários cadastrados</button>
-        <button class="btn">Ver as postagens cadastradas</button>
+        <button class="btn" routerLink="/admin/usuarios">Ver os usuários cadastrados</button>
+        <button class="btn" routerLink="/admin/posts">Ver as postagens cadastradas</button>
     </div>
 </main>

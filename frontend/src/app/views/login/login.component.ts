@@ -9,17 +9,22 @@ import { BackendService } from 'src/app/services/backend.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-// TODO: Salvar no local storage o remember me
+
   loginForm: FormGroup;
+  submitMessage = '';
 
   constructor(private _backendService: BackendService, private _router: Router) {
     this.loginForm = new FormGroup({
-      email: new FormControl(null, Validators.email),
+      email: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required)
     })
   }
 
   ngOnInit(): void {
+    if(localStorage.getItem('email')){
+      this.loginForm.get('email')?.setValue(localStorage.getItem('email'));
+      (document.getElementById('remember-me') as HTMLInputElement).checked = true
+    }
   }
 
   isValid(controlName: string) {
@@ -27,20 +32,32 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    if(this.loginForm.valid){
-      this._backendService.loginUser(this.loginForm.value)
-      .subscribe(
-        data => {
-          console.log(data)
-          localStorage.setItem('token', data.toString())
-          this._router.navigate(['/profile'])
-        },
-        error => {console.log(error)}
-      )
-    } else {
-      Object.keys(this.loginForm.controls).forEach(field => {
-        this.loginForm.get(field)?.markAsTouched({ onlySelf: true })
-      });
+    if(this.loginForm.get('email')?.value == 'admin' && this.loginForm.get('password')?.value == '12345'){
+      this._router.navigate(['/admin/home'])
+    }else {
+      if(this.loginForm.valid){
+        this._backendService.loginUser(this.loginForm.value)
+        .subscribe(
+          data => {
+            console.log(data)
+            localStorage.setItem('token', data.toString())
+            if((document.getElementById('remember-me') as HTMLInputElement).checked){
+              localStorage.setItem('email', this.loginForm.get('email')?.value)
+            } else {
+              localStorage.removeItem('email')
+            }
+            this.submitMessage = 'Login feito com sucesso!'
+            setTimeout(() => {
+              this._router.navigate(['/profile'])
+            }, 1500);
+          },
+          error => {this.submitMessage = error.error.message}
+        )
+      } else {
+        Object.keys(this.loginForm.controls).forEach(field => {
+          this.loginForm.get(field)?.markAsTouched({ onlySelf: true })
+        });
+      }
     }
   }
 }
