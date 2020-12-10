@@ -37,4 +37,8 @@ export class HeaderComponent implements OnInit {
     this.loggedIn = false
     this._router.navigate(['/'])
   }
+
+  encode(str: string){
+    return encodeURIComponent(str)
+  }
 }

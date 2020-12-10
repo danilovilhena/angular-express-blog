@@ -24,5 +24,9 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  encode(str: string){
+    return encodeURIComponent(str)
+  }
 
 }
