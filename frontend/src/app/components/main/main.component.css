@@ -7,6 +7,8 @@ article{
 }
 img{
     object-fit: cover;
+    width: 30%;
+    height: 300px;
 }
 h2{
     text-transform: uppercase;
@@ -24,10 +26,14 @@ p:last-of-type{
 }
 a{
     align-self: flex-end;
+    margin-top: auto;
 }
 div{
     display: flex;
     flex-direction: column;
     margin-left: 3%;
     width: 100%;
+}
+.lighter-text{
+    color: rgba(28, 28, 28, 0.5);
 }

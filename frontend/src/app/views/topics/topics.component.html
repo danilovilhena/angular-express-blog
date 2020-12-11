@@ -6,17 +6,7 @@
             <a href=""><img src="./../../../assets/icons/lupa.svg"></a>
         </form>
         <section id="tags-area">
-            <div routerLink="/"><a>#tecnologia</a></div>
-            <div><a>#backend</a></div>
-            <div><a>#frontend</a></div>
-            <div><a>#webdev</a></div>
-            <div><a>#carreira</a></div>
-            <div><a>#html</a></div>
-            <div><a>#css</a></div>
-            <div><a>#javascript</a></div>
-            <div><a>#typescript</a></div>
-            <div><a>#react</a></div>
-
+            <div *ngFor="let topic of topics"><a>{{topic}}</a></div>
         </section>
     </div>
 </main>

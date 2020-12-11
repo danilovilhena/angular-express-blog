@@ -99,3 +99,7 @@ main{
     display: flex;
     justify-content: flex-end;
 }
+
+.invalid{
+    border: 3px solid #ea0000 !important;
+}

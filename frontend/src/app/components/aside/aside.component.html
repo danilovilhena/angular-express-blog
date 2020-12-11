@@ -1,19 +1,14 @@
 <aside>
     <h2 id="topics-h2">Assuntos</h2>
     <ul id="topics-ul">
-        <li><a href="#">Tecnologia</a></li>
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">PHP</a></li>
+        <li *ngFor="let topic of topics | keyvalue: keyDescOrder">
+            <a href="#">{{topic.key}} ({{topic.value}})</a>
+        </li>
     </ul>
     <h2 id="date-h2">Por data</h2>
     <ul id="date-ul">
-        <li><a href="#">Novembro - 2020</a></li>
-        <li><a href="#">Outubro - 2020</a></li>
-        <li><a href="#">Setembro - 2020</a></li>
-        <li><a href="#">Dezembro - 2019</a></li>
-        <li><a href="#">Outubro - 2019</a></li>
-        <li><a href="#">Agosto - 2019</a></li>
+        <li *ngFor="let date of dates | keyvalue: keyDescOrder">
+            <a href="#">{{date.key}} ({{date.value}})</a>
+        </li>
     </ul>
 </aside>

@@ -1,5 +1,5 @@
-# Remover o username lá do frontend todo, vai ser só o nome do povo
-# Ajustar a cor dos subtítulos para #1c1c1c (50%)
 # Verificar a semântica do HTML no final da implementação
 # Verificar a acessibilidade da página
-# Verificar a responsividade
+# Verificar a responsividade,
+
+# Dynamic routes

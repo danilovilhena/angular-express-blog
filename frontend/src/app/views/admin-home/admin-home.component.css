@@ -16,7 +16,6 @@ main{
 #data{
     display: flex;
     flex-direction: column;
-    transform: translateX(10%);
 }
 #data .data-line{
     display: flex;

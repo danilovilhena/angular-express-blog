@@ -25,7 +25,7 @@ router.get('/get_id/:id', async (req, res) => {
     if (!user) res.status(404).send("Nenhum usuário encontrado.")
     res.status(200).send(user)
   } catch (err) {
-    res.status(501).json({message: "E-mail já cadastrado."})
+    res.status(501).json({message: err})
   }
 })
 
@@ -37,7 +37,7 @@ router.delete('/delete/:id', async (req, res) => {
     if (!user) res.status(404).send("Nenhum usuário encontrado.")
     res.status(200).send()
   } catch (err) {
-    res.status(501).json({message: "E-mail já cadastrado."})
+    res.status(501).json({message: err})
   }
 })
 

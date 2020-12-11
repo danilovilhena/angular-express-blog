@@ -7,12 +7,13 @@
             <p *ngIf="users.length == 1">usuário cadastrado</p>
         </div>
         <div class="data-line">
-            <p class="data-number">20</p>
-            <p>postagens feitas</p>
+            <p class="data-number">{{ (posts.length).toLocaleString(undefined, {minimumIntegerDigits: 2}) }}</p>
+            <p *ngIf="users.length != 1">postagens feitas</p>
+            <p *ngIf="users.length == 1">postagem feita</p>
         </div>
         <div class="data-line">
-            <p class="data-number">05</p>
-            <p>quantidade média de postagens</p>
+            <p class="data-number">{{((posts.length)/(users.length)).toFixed(1)}}</p>
+            <p>postagens em média</p>
         </div>
     </div>
     <div id="buttons">

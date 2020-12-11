@@ -25,6 +25,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { ProfileEditComponent } from './views/profile-edit/profile-edit.component';
 
 import { BackendService } from './services/backend.service';
+import { JwPaginationComponent } from './components/jw-pagination/jw-pagination.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { BackendService } from './services/backend.service';
     AdminPostsComponent,
     WritePostComponent,
     ProfileComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,

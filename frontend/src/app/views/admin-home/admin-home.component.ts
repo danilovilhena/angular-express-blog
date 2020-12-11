@@ -10,6 +10,7 @@ import { BackendService } from 'src/app/services/backend.service';
 export class AdminHomeComponent implements OnInit {
 
   users: any;
+  posts: any;
   
   constructor(private _backendService: BackendService, private _router: Router) {
     this._backendService.getAllUsers()
@@ -17,6 +18,15 @@ export class AdminHomeComponent implements OnInit {
       data => {
         this.users = data
         console.log(this.users)
+      },
+      error => console.log(error)
+    )
+
+    this._backendService.getAllPosts()
+    .subscribe(
+      data => {
+        this.posts = data
+        console.log(this.posts)
       },
       error => console.log(error)
     )

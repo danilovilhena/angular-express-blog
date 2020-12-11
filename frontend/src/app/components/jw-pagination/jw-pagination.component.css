@@ -1,0 +1,10 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.pagination{
+    justify-content: center;
+}
+.page-item.active .page-link{
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+}

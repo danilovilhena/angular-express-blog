@@ -2,30 +2,64 @@
 <main>
     <div class="my-auto" id="main-div">
         <h1 class="text-left w-100">Escrever um post</h1>
-        <form action="">
+        <form [formGroup]="postForm">
             <div class="form-area">
                 <label for="email">Título</label>
-                <input type="text" placeholder="Título" id="email" class="form-control" required>
+                <input formControlName="title" type="text" placeholder="Título" id="email" class="form-control" [class.invalid]="isValid('title')" required>
             </div>
             <div class="form-area">
                 <label for="description">Descrição</label>
-                <textarea name="Descrição" placeholder="Descrição" id="description" rows="10" required></textarea>
+                <textarea formControlName="description" name="Descrição" placeholder="Descrição" id="description" rows="10" [class.invalid]="isValid('description')" required></textarea>
             </div>
             <div class="form-area">
                 <label for="assuntos">Assuntos</label>
-                <select class="selectpicker w-100" multiple data-live-search="true" title="Nenhum assunto selecionado">
+                <select formControlName="topics" class="selectpicker w-100" multiple data-live-search="true" title="Nenhum assunto selecionado" id="assuntos">
                     <option>Tecnologia</option>
-                    <option>Javascript</option>
-                    <option>SCSS</option>
+                    <option>Mobile</option>
+                    <option>Redes Sociais</option>
+                    <option>Filmes e Séries</option>
+                    <option>Aplicativo</option>
+                    <option>Web</option>
+                    <option>Jogos</option>
+                    <option>Computadores</option>
+                    <option>Hardware</option>
+                    <option>Software</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                    <option>Banco de dados</option>
+                    <option>Testes</option>
+                    <option>Servidores</option>
+                    <option>Computação em Nuvem</option>
+                    <option>Microserviços</option>
+                    <option>Git</option>
+                    <option>DevOps</option>
+                    <option>Open Source</option>
+                    <option>Aprendizado de máquina</option>
+                    <option>Inteligência Artificial</option>
+                    <option>Ciência de dados</option>
+                    <option>Cibersegurança</option>
+                    <option>Redes</option>
+                    <option>Robótica</option>
+                    <option>IoT</option>
+                    <option>Computação Gráfica</option>
+                    <option>Carreira</option>
+                    <option>Mercado de trabalho</option>
+                    <option>Programas</option>
+                    <option>Mac</option>
+                    <option>Windows</option>
+                    <option>Linux</option>
                 </select>
             </div>
             <div class="form-area">
                 <label for="image">Imagem (URL)</label>
-                <input type="text" placeholder="Imagem" id="image" class="form-control" required>
+                <input formControlName="imageURL" type="text" placeholder="Imagem" id="image" class="form-control" [class.invalid]="isValid('image')" required>
             </div>
-            <div id="buttons-div">
-                <button type="submit" class="btn" id="clear-btn">Limpar</button>
-                <button type="submit" class="btn" id="submit-btn">Postar</button>
+            <div id="buttons-div" class="mb-3">
+                <button type="submit" class="btn" id="clear-btn" (click)="reset()">Limpar</button>
+                <button type="submit" class="btn" id="submit-btn" (click)="submit()">Postar</button>
+            </div>
+            <div class="alert" [class.d-none]="submitMessage == ''" [class.alert-success]="submitMessage.includes('sucesso')" [class.alert-danger]="!submitMessage.includes('sucesso')" role="alert" style="font-family: 'Open Sans', sans-serif;">
+                {{submitMessage}}
             </div>
         </form>
     </div>

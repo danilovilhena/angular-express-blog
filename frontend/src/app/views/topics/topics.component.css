@@ -47,4 +47,10 @@
     font-weight: bold;
     cursor: pointer;
     width: 20%;
+    transition: all 0.325s ease-in-out;
+}
+#tags-area div:hover{
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+    color: #fff;
 }

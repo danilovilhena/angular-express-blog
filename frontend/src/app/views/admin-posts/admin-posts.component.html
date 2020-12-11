@@ -1,59 +1,17 @@
 <app-admin-header></app-admin-header>
 <main>
     <h1>Postagens</h1>
-    <section>
-        <img src="./../../../assets/images/card1.png">
+    <section *ngFor="let post of posts">
+        <img src="{{post.imageURL}}">
         <div>
             <div class="info-div">
-                <h2>Tecnologia</h2>
-                <h1>Tempor deserunt Sunt Qui</h1>
-                <p>Connie Robertson | November 3, 2020 (10 mins read)</p>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
+                <h2 class="lighter-text">{{post.topics[0]}}</h2>
+                <h1>{{post.title}}</h1>
+                <p class="lighter-text">{{post.author_name}} | {{formatDate(post.creation_date)}} ({{calculateReadTime(post.description)}} minutos de leitura)</p>
+                <p>{{splitFirstParagraph(post.description)}}</p>
             </div>
             <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <img src="./../../../assets/images/card2.png">
-        <div>
-            <div class="info-div">
-                <h2>Tecnologia</h2>
-                <h1>Tempor deserunt Sunt Qui</h1>
-                <p>Connie Robertson | November 3, 2020 (10 mins read)</p>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <img src="./../../../assets/images/card3.png">
-        <div>
-            <div class="info-div">
-                <h2>Tecnologia</h2>
-                <h1>Tempor deserunt Sunt Qui</h1>
-                <p>Connie Robertson | November 3, 2020 (10 mins read)</p>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <img src="./../../../assets/images/card4.png">
-        <div>
-            <div class="info-div">
-                <h2>Tecnologia</h2>
-                <h1>Tempor deserunt Sunt Qui</h1>
-                <p>Connie Robertson | November 3, 2020 (10 mins read)</p>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
-            </div>
-            <div class="buttons-div">
-                <button class="btn">Excluir</button>
+                <button class="btn" (click)="removePost(post._id)">Excluir</button>
             </div>
         </div>
     </section>
