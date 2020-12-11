@@ -2,11 +2,11 @@
 <main>
     <div id="main-div">
         <form action="" id="search-area">
-            <input class="form-control" type="search" placeholder="Pesquise pelo tópico que desejar" aria-label="Pesquise pelo tópico que desejar">
+            <input class="form-control" (keyup)="filterTopics($event)" type="search" placeholder="Pesquise pelo assunto que desejar" aria-label="Pesquise pelo tópico que desejar">
             <a href=""><img src="./../../../assets/icons/lupa.svg"></a>
         </form>
         <section id="tags-area">
-            <div *ngFor="let topic of topics"><a>{{topic}}</a></div>
+            <div *ngFor="let topic of topics" [routerLink]="['/assunto', topic]"><a>{{topic}}</a></div>
         </section>
     </div>
 </main>

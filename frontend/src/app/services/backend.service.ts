@@ -69,6 +69,12 @@ export class BackendService {
     })
   }
 
+  getPostsByTopic(topic: string){
+    return this._http.get(`http://localhost:3000/posts/topic/${topic}`, {
+      observe: 'body'
+    })
+  }
+
   getPostById(id: string){
     return this._http.get(`http://localhost:3000/posts/post/${id}`, {
       observe: 'body'

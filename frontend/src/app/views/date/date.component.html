@@ -1,0 +1,7 @@
+<app-header></app-header>
+<main>
+    <h1 [class.mb-5]="posts.length != 0" [class.mb-4]="posts.length == 0">{{date}}</h1>
+    <app-post [post]='post' *ngFor="let post of posts"></app-post>
+    <p *ngIf="posts.length == 0" style="font-size: 1.5rem;">Nenhum post sobre esse assunto ainda.</p>
+    <button [class.mt-3]="posts.length == 0" class="btn" (click)="navigateBack()">Voltar</button>
+</main>

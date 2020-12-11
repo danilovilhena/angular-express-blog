@@ -40,9 +40,9 @@ router.get('/author/:id', async (req, res) => {
 // Pegar um post pelo assunto
 router.get('/topic/:topic', async (req, res) => {
   try {
-    const posts = await Post.find({topics: req.params.topic})
+    const posts = await Post.find({topics: decodeURIComponent(req.params.topic)})
 
-    if (!posst) res.status(404).send("Nenhuma postagem encontrada.")
+    if (!posts) res.status(404).send("Nenhuma postagem encontrada.")
     res.status(200).send(posts)
   } catch (err) {
     res.status(501).json({message: err})

@@ -1,13 +1,4 @@
 <main>
-    <article *ngFor="let post of pageOfItems | slice:1">
-        <img src="{{post.imageURL}}">
-        <div>
-            <h2 class="lighter-text">{{post.topics[0]}}</h2>
-            <h1>{{post.title}}</h1>
-            <p class="lighter-text">{{post.author_name}} | {{formatDate(post.creation_date)}} ({{calculateReadTime(post.description)}} minutos de leitura)</p>
-            <p>{{splitFirstParagraph(post.description)}}</p>
-            <a [routerLink]="['/artigo', post._id]" >Ver mais →</a>
-        </div>
-    </article>
+    <app-post [post]="post" *ngFor="let post of pageOfItems | slice:1"></app-post>
     <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
 </main>
