@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
         error => console.log(error)
       )
 
-      this._backendService.getPostsByUser(this.user._id)
+      this._backendService.getPostsByAuthor(this.user._id)
       .subscribe(
         data => {
           this.posts = data

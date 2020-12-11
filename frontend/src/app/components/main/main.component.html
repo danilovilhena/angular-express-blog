@@ -6,7 +6,7 @@
             <h1>{{post.title}}</h1>
             <p class="lighter-text">{{post.author_name}} | {{formatDate(post.creation_date)}} ({{calculateReadTime(post.description)}} minutos de leitura)</p>
             <p>{{splitFirstParagraph(post.description)}}</p>
-            <a href="#">Ver mais →</a>
+            <a [routerLink]="['/artigo', post._id]" >Ver mais →</a>
         </div>
     </article>
     <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>

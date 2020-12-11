@@ -63,8 +63,14 @@ export class BackendService {
     })
   }
 
-  getPostsByUser(id: string){
+  getPostsByAuthor(id: string){
     return this._http.get(`http://localhost:3000/posts/author/${id}`, {
+      observe: 'body'
+    })
+  }
+
+  getPostById(id: string){
+    return this._http.get(`http://localhost:3000/posts/post/${id}`, {
       observe: 'body'
     })
   }

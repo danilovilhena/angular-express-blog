@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: "register", component: RegisterComponent},
   {path: "forgot_password", component: ForgotPasswordComponent},
   {path: "assuntos", component: TopicsComponent},
-  {path: "artigo", component: ArticleComponent},
+  {path: "artigo/:id", component: ArticleComponent},
   {path: "write_post", component: WritePostComponent},
   {path: "profile", component: ProfileComponent},
   {path: "profile/edit", component: ProfileEditComponent},

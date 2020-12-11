@@ -1,21 +1,22 @@
 <app-header></app-header>
 <main>
-    <img src="./../../../assets/images/main_article_placeholder.png" alt="">
+    <img src="{{post.imageURL}}">
     <section id="article-section">
-        <h1>A tecnologia mais perigosa do mundo.</h1>
-        <p>Ralph Hawkins | May 7, 2019 (10 minutos de leitura)</p>
-        <p>#tecnologia #js #carreira</p>
-        <p>Commodo labore ut nisi laborum amet eu qui magna ullamco ut labore. Aliquip consectetur labore consectetur dolor exercitation est minim quis. Magna non irure qui ex est laborum nulla excepteur qui. Anim Lorem dolore cupidatat pariatur ex tempor. Duis ea excepteur proident ex commodo irure est.<br><br>Nisi commodo qui pariatur enim sint laborum consequat enim in officia. Officia fugiat incididunt commodo et mollit aliqua non aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod. Quis exercitation sit velit duis.<br><br>Est Lorem labore consectetur minim sit eu eiusmod mollit velit. Consectetur voluptate ex amet id eiusmod laborum irure. Aliquip ad qui id exercitation irure amet commodo nisi quis. Occaecat minim incididunt eiusmod nostrud veniam quis culpa.Nisi ipsum et consequat id deserunt excepteur. Cillum non pariatur culpa ut occaecat laboris eu. Ullamco ad Lorem et elit laboris eu qui irure nulla qui culpa et. Cupidatat sunt ipsum proident aute exercitation do tempor aliqua cupidatat quis non exercitation. Adipisicing do minim dolore nulla mollit. Adipisicing incididunt irure ipsum et in esse ipsum elit tempor.<br><br>Aliquip mollit sunt qui irure. Irure ullamco Lorem excepteur dolor qui ea ad quis. Enim fugiat cillum enim ad occaecat sint qui elit labore mollit sunt laborum fugiat consequat. Voluptate labore sunt duis eu deserunt. Occaecat do ut ut labore cillum enim dolore ad enim enim id. Aliquip do veniam ad excepteur ad cillum qui deserunt nostrud sunt aliqua duis sunt occaecat. Laborum incididunt commodo ullamco proident quis.</p>
+        <h1 class="">{{post.title}}</h1>
+        <p class="lighter-text">{{post.author_name}} | {{formatDate(post.creation_date)}} ({{calculateReadTime(post.description)}} minutos de leitura)</p>
+        <p class="lighter-text">{{formatTopics(post.topics)}}</p>
+        <p [innerHTML]='formatDescription(post.description)'></p>
     </section>
     <section id="author-section">
         <h2 class="mb-3">Sobre o Autor</h2>
         <div id="author-div">
-            <img src="./../../../assets/images/user.png">
+            <img src="https://ui-avatars.com/api/?name=${{encode(author.name)}}&background=random&rounded=true">
             <div id="author-content">
-                <h1>Antônio Silva</h1>
-                <p>Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
+                <h1>{{author.name}}</h1>
+                <p *ngIf="author.description != ''">{{author.description}}</p>
+                <p *ngIf="author.description == ''">O autor ainda não escreveu sua descrição!</p>
             </div>
         </div>
     </section>
-    <button class="btn">Voltar</button>
+    <button class="btn" (click)="navigateBack()">Voltar</button>
 </main>

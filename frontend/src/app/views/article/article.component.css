@@ -21,6 +21,8 @@ section{
 }
 #article-section h1{
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 #article-section p:not(:last-of-type){
     text-align: center;
@@ -72,4 +74,9 @@ button{
 button:hover{
     color: #ffffff;
     background-color: #292929;
+}
+
+.lighter-text{
+    color: rgba(28, 28, 28, 0.5);
+    font-family: 'Open Sans', sans-serif;
 }
