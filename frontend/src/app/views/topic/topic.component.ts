@@ -21,22 +21,21 @@ export class TopicComponent implements OnInit {
   ngOnInit(): void {
     this._route.params.subscribe((params: Params) => {
       this.topic = params.topic;
-    });
-
-    this._backendService.getPostsByTopic(this.topic)
-    .subscribe(
-      data => {
-        this.posts = data;
-        this.posts.sort((a:any, b:any) => { return b.creation_date - a.creation_date});
-        this.topicString = this.posts[0].topics[0]
-        this.posts[0].topics.forEach((topic: any) => {
-          if(topic.substr(0,3).toLowerCase() == topic.substr(0,3)){
-            this.topicString = topic
-          }
-        });
-      },
-      error => console.log(error)
-    )
+      this._backendService.getPostsByTopic(this.topic)
+      .subscribe(
+        data => {
+          this.posts = data;
+          this.posts.sort((a:any, b:any) => { return b.creation_date - a.creation_date});
+          this.topicString = this.posts[0].topics[0]
+          this.posts[0].topics.forEach((topic: any) => {
+            if(topic.substr(0,3).toLowerCase() == topic.substr(0,3)){
+              this.topicString = topic
+            }
+          });
+        },
+        error => console.log(error)
+      )
+    });    
   }
 
   navigateBack(){

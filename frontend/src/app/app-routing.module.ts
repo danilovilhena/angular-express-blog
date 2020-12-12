@@ -12,6 +12,7 @@ import { LoginComponent } from './views/login/login.component';
 import { ProfileEditComponent } from './views/profile-edit/profile-edit.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { RegisterComponent } from './views/register/register.component';
+import { SearchComponent } from './views/search/search.component';
 import { TopicComponent } from './views/topic/topic.component';
 import { TopicsComponent } from './views/topics/topics.component';
 import { WritePostComponent } from './views/write-post/write-post.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "assuntos", component: TopicsComponent},
   {path: "assunto/:topic", component: TopicComponent},
   {path: "data/:year/:month", component: DateComponent},
+  {path: "busca/:query", component: SearchComponent},
   {path: "post/:id", component: ArticleComponent},
   {path: "escrever_post", component: WritePostComponent},
   {path: "perfil", component: ProfileComponent},

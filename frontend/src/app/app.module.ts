@@ -28,6 +28,7 @@ import { JwPaginationComponent } from './components/jw-pagination/jw-pagination.
 import { TopicComponent } from './views/topic/topic.component';
 import { PostComponent } from './components/post/post.component';
 import { DateComponent } from './views/date/date.component';
+import { SearchComponent } from './views/search/search.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { DateComponent } from './views/date/date.component';
     JwPaginationComponent,
     TopicComponent,
     PostComponent,
-    DateComponent
+    DateComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

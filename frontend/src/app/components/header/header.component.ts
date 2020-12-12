@@ -38,7 +38,31 @@ export class HeaderComponent implements OnInit {
     this._router.navigate(['/'])
   }
 
+  submitForm(){
+    let query = (document.getElementById('searchInput') as HTMLInputElement).value
+    query = this.slugify(query)
+    this._router.navigate(['/busca', query]).then(() => window.location.reload());
+  }
+
   encode(str: string){
     return encodeURIComponent(str)
+  }
+
+  slugify(str: string){
+    str = str.replace(/^\s+|\s+$/g, '');
+    str = str.toLowerCase();
+
+    var from = "àáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
+    var to = "aaaaaeeeeiiiioooouuuunc------";
+  
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+  
+    str = str.replace(/[^a-z0-9 -]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  
+    return str;
   }
 }
