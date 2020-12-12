@@ -1,4 +1,3 @@
-# Pensar em como atualizar o token para não ter que duplicar a chamada de api no profile e profile_edit
 # Verificar a semântica do HTML no final da implementação
 # Verificar a acessibilidade da página
 # Verificar a responsividade
