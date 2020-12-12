@@ -63,7 +63,7 @@ export class WritePostComponent implements OnInit {
         (data) => {
           this.submitMessage = "Post feito com sucesso!"
           setTimeout(() => {
-            this._router.navigate(['/profile'])
+            this._router.navigate(['/perfil'])
           }, 1500);
         },
         (error) => {

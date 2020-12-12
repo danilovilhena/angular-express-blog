@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.loginForm.get('email')?.value == 'admin' && this.loginForm.get('password')?.value == '12345'){
-      this._router.navigate(['/admin/home'])
+      this._router.navigate(['/admin/inicio'])
     }else {
       if(this.loginForm.valid){
         this._backendService.loginUser(this.loginForm.value)
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
             }
             this.submitMessage = 'Login feito com sucesso!'
             setTimeout(() => {
-              this._router.navigate(['/profile'])
+              this._router.navigate(['/perfil'])
             }, 1500);
           },
           error => {this.submitMessage = error.error.message}

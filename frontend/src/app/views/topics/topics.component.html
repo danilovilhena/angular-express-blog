@@ -6,7 +6,7 @@
             <a href=""><img src="./../../../assets/icons/lupa.svg"></a>
         </form>
         <section id="tags-area">
-            <div *ngFor="let topic of topics" [routerLink]="['/assunto', topic]"><a>{{topic}}</a></div>
+            <div *ngFor="let topic of topics" [routerLink]="['/assunto', slugify(topic)]"><a>{{topic}}</a></div>
         </section>
     </div>
 </main>

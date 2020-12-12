@@ -40,7 +40,7 @@ router.get('/author/:id', async (req, res) => {
 // Pegar um post pelo assunto
 router.get('/topic/:topic', async (req, res) => {
   try {
-    const posts = await Post.find({topics: decodeURIComponent(req.params.topic)})
+    const posts = await Post.find({topics_slugs: req.params.topic})
 
     if (!posts) res.status(404).send("Nenhuma postagem encontrada.")
     res.status(200).send(posts)
@@ -67,6 +67,7 @@ router.post('/create', function(req,res,next) {
     title: req.body.title,
     description: req.body.description,
     topics: req.body.topics,
+    topics_slugs: slugifyArr(req.body.topics), 
     imageURL: req.body.imageURL,
     creation_date: Date.now(),
     author_name: req.body.author_name,
@@ -83,5 +84,33 @@ router.post('/create', function(req,res,next) {
     return res.status(501).send(err)
   })
 })
+
+const slugifyArr = (arr) => {
+  let formatted = []
+
+  arr.forEach(element => {
+    formatted.push(slugifyStr(element))
+  });
+
+  return formatted;
+}
+
+function slugifyStr (str) {
+  str = str.replace(/^\s+|\s+$/g, '');
+  str = str.toLowerCase();
+
+  var from = "àáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  var to = "aaaaaeeeeiiiioooouuuunc------";
+
+  for (var i=0, l=from.length ; i<l ; i++) {
+      str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+
+  return str;
+}
 
 module.exports = router;

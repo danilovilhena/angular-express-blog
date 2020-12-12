@@ -33,7 +33,7 @@ export class ArticleComponent implements OnInit {
         data => this.author = data,
         error => console.log(error)
       )
-    }, 100);
+    }, 200);
 
   }
 

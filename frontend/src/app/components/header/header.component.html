@@ -17,7 +17,7 @@
                 <a href=""><img src="./../../../assets/icons/lupa.svg"></a>
             </form>
             <button routerLink="/login" id="login-btn" class="btn" type="submit">Login</button>
-            <button routerLink="/register" id="register-btn" class="btn" type="submit">Cadastre-se</button>
+            <button routerLink="/cadastro" id="register-btn" class="btn" type="submit">Cadastre-se</button>
         </div>
     </ng-container>
 
@@ -42,11 +42,11 @@
             <div class="dropdown">
                 <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://ui-avatars.com/api/?name=${{encode(user.name)}}&background=random&rounded=true" width="50">
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item mb-0" routerLink="/profile"><b>{{user.name}}</b></a>
+                    <a class="dropdown-item mb-0" routerLink="/perfil"><b>{{user.name}}</b></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" routerLink="/profile">Meu perfil</a>
-                    <a class="dropdown-item" routerLink="/write_post">Escrever um post</a>
-                    <a class="dropdown-item" routerLink="/profile/edit">Configurações</a>
+                    <a class="dropdown-item" routerLink="/perfil">Meu perfil</a>
+                    <a class="dropdown-item" routerLink="/escrever_post">Escrever um post</a>
+                    <a class="dropdown-item" routerLink="/editar_perfil">Configurações</a>
                     <a class="dropdown-item" (click)="logout()" style="cursor: pointer;">Sair</a>
                     
                 </div>

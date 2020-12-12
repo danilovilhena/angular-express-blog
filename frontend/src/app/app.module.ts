@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './views/about/about.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { ForgotPasswordComponent } from './views/forgot-password/forgot-password.component';
 import { MainArticleComponent } from './components/main-article/main-article.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
@@ -38,7 +37,6 @@ import { DateComponent } from './views/date/date.component';
     AboutComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent,
     MainArticleComponent,
     AsideComponent,
     MainComponent,

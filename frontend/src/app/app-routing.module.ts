@@ -7,7 +7,6 @@ import { AdminPostsComponent } from './views/admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './views/admin-users/admin-users.component';
 import { ArticleComponent } from './views/article/article.component';
 import { DateComponent } from './views/date/date.component';
-import { ForgotPasswordComponent } from './views/forgot-password/forgot-password.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { ProfileEditComponent } from './views/profile-edit/profile-edit.component';
@@ -21,16 +20,15 @@ const routes: Routes = [
   {path: "", component: HomeComponent },
   {path: "sobre", component: AboutComponent},
   {path: "login", component: LoginComponent},
-  {path: "register", component: RegisterComponent},
-  {path: "forgot_password", component: ForgotPasswordComponent},
+  {path: "cadastro", component: RegisterComponent},
   {path: "assuntos", component: TopicsComponent},
   {path: "assunto/:topic", component: TopicComponent},
   {path: "data/:year/:month", component: DateComponent},
-  {path: "artigo/:id", component: ArticleComponent},
-  {path: "write_post", component: WritePostComponent},
-  {path: "profile", component: ProfileComponent},
-  {path: "profile/edit", component: ProfileEditComponent},
-  {path: "admin/home", component: AdminHomeComponent},
+  {path: "post/:id", component: ArticleComponent},
+  {path: "escrever_post", component: WritePostComponent},
+  {path: "perfil", component: ProfileComponent},
+  {path: "editar_perfil", component: ProfileEditComponent},
+  {path: "admin/inicio", component: AdminHomeComponent},
   {path: "admin/usuarios", component: AdminUsersComponent},
   {path: "admin/posts", component: AdminPostsComponent}
 ];

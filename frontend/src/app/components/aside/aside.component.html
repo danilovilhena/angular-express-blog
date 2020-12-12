@@ -2,7 +2,7 @@
     <h2 id="topics-h2">Assuntos</h2>
     <ul id="topics-ul">
         <li *ngFor="let topic of topics | keyvalue: keyDescOrder">
-            <a [routerLink]="['/assunto', topic.key]">{{topic.key}} ({{topic.value}})</a>
+            <a [routerLink]="['/assunto', slugify(topic.key)]">{{topic.key}} ({{topic.value}})</a>
         </li>
     </ul>
     <h2 id="date-h2">Por data</h2>

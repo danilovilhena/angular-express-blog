@@ -11,6 +11,7 @@ import { BackendService } from 'src/app/services/backend.service';
 export class TopicComponent implements OnInit {
 
   topic = '';
+  topicString = '';
   posts: any;
   author: any;
   
@@ -27,6 +28,12 @@ export class TopicComponent implements OnInit {
       data => {
         this.posts = data;
         this.posts.sort((a:any, b:any) => { return b.creation_date - a.creation_date});
+        this.topicString = this.posts[0].topics[0]
+        this.posts[0].topics.forEach((topic: any) => {
+          if(topic.substr(0,3).toLowerCase() == topic.substr(0,3)){
+            this.topicString = topic
+          }
+        });
       },
       error => console.log(error)
     )
