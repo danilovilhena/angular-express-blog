@@ -11,12 +11,12 @@ header{
 
 /* Left side */
 #left-side{
-    width: 50%;
+    width: auto;
     display: flex;
     align-items: center;
 }
     #left-side img{
-        width: 30%;
+        width: 10rem;
     }
     #left-side nav{
         display: flex;
@@ -48,7 +48,7 @@ header{
 
 /* Right side */
 #right-side{
-    width: 50%;
+    width: 52%;
     display: flex;
     align-items: center;
     justify-content: flex-end;

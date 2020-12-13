@@ -5,7 +5,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css', './header.responsivity.css']
 })
 export class HeaderComponent implements OnInit {
 

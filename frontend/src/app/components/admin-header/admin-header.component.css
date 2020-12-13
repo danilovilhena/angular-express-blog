@@ -16,7 +16,7 @@ header{
     align-items: center;
 }
     #left-side img{
-        width: 30%;
+        width: 10rem;
     }
     #left-side nav{
         display: flex;
