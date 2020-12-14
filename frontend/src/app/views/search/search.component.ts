@@ -6,7 +6,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css', './search.responsivity.css']
 })
 export class SearchComponent implements OnInit {
 

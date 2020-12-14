@@ -1,0 +1,12 @@
+@media (max-width: 1000px){
+    section{
+        flex-direction: column-reverse;
+    }
+    div{
+        border-right: none;
+        padding-right: 3%;
+    }
+    div, img{
+        width: 100%;
+    }
+}

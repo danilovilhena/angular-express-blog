@@ -8,7 +8,7 @@ declare var $: any;
 @Component({
   selector: 'app-write-post',
   templateUrl: './write-post.component.html',
-  styleUrls: ['./write-post.component.css']
+  styleUrls: ['./write-post.component.css', './write-post.responsivity.css']
 })
 export class WritePostComponent implements OnInit {
 

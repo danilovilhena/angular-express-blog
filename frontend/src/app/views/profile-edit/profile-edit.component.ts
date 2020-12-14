@@ -6,7 +6,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-profile-edit',
   templateUrl: './profile-edit.component.html',
-  styleUrls: ['./profile-edit.component.css']
+  styleUrls: ['./profile-edit.component.css', './profile-edit.responsivity.css']
 })
 export class ProfileEditComponent implements OnInit {
   profileForm: FormGroup;

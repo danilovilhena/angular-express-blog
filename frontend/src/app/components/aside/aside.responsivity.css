@@ -1,0 +1,10 @@
+@media (max-width: 1000px){
+    aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #date-h2{
+        margin-top: 0;
+    }
+}

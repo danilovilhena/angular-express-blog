@@ -1,0 +1,10 @@
+@media (max-width: 1100px){
+    #article-section, #author-section{
+        width: 60%;
+    }
+}
+@media (max-width: 930px){
+    #article-section, #author-section{
+        width: 80%;
+    }
+}

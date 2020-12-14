@@ -16,8 +16,10 @@
                 <input id="searchInput" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
                 <a (click)="submitForm()" style="cursor: pointer;"><img src="./../../../assets/icons/lupa.svg" alt="Ícone de lupa"></a>
             </form>
-            <button routerLink="/login" id="login-btn" class="btn" type="submit">Login</button>
-            <button routerLink="/cadastro" id="register-btn" class="btn" type="submit">Cadastre-se</button>
+            <div>
+                <button routerLink="/login" id="login-btn" class="btn" type="submit">Login</button>
+                <button routerLink="/cadastro" id="register-btn" class="btn" type="submit">Cadastre-se</button>
+            </div>
         </div>
     </ng-container>
 

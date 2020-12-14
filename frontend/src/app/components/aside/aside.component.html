@@ -1,14 +1,18 @@
 <aside>
-    <h2 id="topics-h2">Assuntos</h2>
-    <ul id="topics-ul">
-        <li *ngFor="let topic of topics | keyvalue: keyDescOrder">
-            <a [routerLink]="['/assunto', slugify(topic.key)]">{{topic.key}} ({{topic.value}})</a>
-        </li>
-    </ul>
-    <h2 id="date-h2">Por data</h2>
-    <ul id="date-ul">
-        <li *ngFor="let date of dates | keyvalue: keyDescOrder">
-            <a [routerLink]="['/data', date.key.split(' de ')[1], date.key.split(' de ')[0].toLowerCase()]">{{date.key}} ({{date.value}})</a>
-        </li>
-    </ul>
+    <div>
+        <h2 id="topics-h2">Assuntos</h2>
+        <ul id="topics-ul">
+            <li *ngFor="let topic of topics | keyvalue: keyDescOrder">
+                <a [routerLink]="['/assunto', slugify(topic.key)]">{{topic.key}} ({{topic.value}})</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2 id="date-h2">Por data</h2>
+        <ul id="date-ul">
+            <li *ngFor="let date of dates | keyvalue: keyDescOrder">
+                <a [routerLink]="['/data', date.key.split(' de ')[1], date.key.split(' de ')[0].toLowerCase()]">{{date.key}} ({{date.value}})</a>
+            </li>
+        </ul>
+    </div>
 </aside>

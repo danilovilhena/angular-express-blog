@@ -6,7 +6,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css', './register.responsivity.css']
 })
 export class RegisterComponent implements OnInit {
 

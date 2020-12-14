@@ -6,7 +6,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css', './article.responsivity.css']
 })
 export class ArticleComponent implements OnInit {
 

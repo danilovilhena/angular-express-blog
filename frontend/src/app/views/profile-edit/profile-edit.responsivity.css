@@ -1,0 +1,34 @@
+@media (max-width: 1350px){
+    main #main-div{
+        width: 39%;
+    }
+}
+
+@media (max-width: 970px){
+    main{
+        height: auto;
+        margin-top: 4rem;
+    }
+    main #main-div{
+        width: 49%;
+    }
+    
+}
+
+@media (max-width: 780px){
+    main #main-div{
+        width: 69%;
+    }
+}
+
+@media (max-width: 540px){
+    main #main-div{
+        width: 89%;
+    }
+    main #buttons-div{
+        justify-content: space-evenly;
+    }
+    main .btn{
+        width: 40%;
+    }
+}

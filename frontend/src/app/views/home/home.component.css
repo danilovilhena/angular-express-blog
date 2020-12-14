@@ -1,0 +1,9 @@
+@media (max-width: 1000px){
+    div{
+        flex-direction: column;
+        align-items: center;
+    }
+    app-main, app-aside{
+        width: 90% !important;
+    }
+}
