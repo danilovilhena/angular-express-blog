@@ -19,6 +19,7 @@ import { WritePostComponent } from './views/write-post/write-post.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent },
+  {path: "inicio", component: HomeComponent },
   {path: "sobre", component: AboutComponent},
   {path: "login", component: LoginComponent},
   {path: "cadastro", component: RegisterComponent},
