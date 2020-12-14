@@ -2,7 +2,7 @@
 <main>
     <div class="my-auto" id="main-div">
         <h1 class="text-left w-100">Configurações</h1>
-        <form [formGroup]="profileForm">
+        <form [formGroup]="profileForm" (submit)="save()">
             <div class="form-area">
                 <label for="name">Nome</label>
                 <input formControlName="name" type="text" placeholder="Nome" id="name" class="form-control" required>

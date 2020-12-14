@@ -1,0 +1,36 @@
+@media (max-width: 930px){
+    #first-section img{
+        display: none;
+    }
+    #first-section div{
+        width: 50%;
+    }
+    #first-section{
+        height: 200px;
+    }
+}
+
+@media (max-width: 800px){
+    #first-section div{
+        width: 75%;
+    }
+    #first-section{
+        height: 150px;
+    }
+    #second-section section{
+        flex-direction: column;
+    }
+    #second-section div{
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+    #second-section h1{
+        margin-bottom: 2rem;
+    }
+    #second-section h2, #second-section p{
+        text-align: center;
+    }
+    #second-section img{
+        width: 80%;
+    }
+}

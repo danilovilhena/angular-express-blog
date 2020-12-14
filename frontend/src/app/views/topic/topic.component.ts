@@ -27,9 +27,13 @@ export class TopicComponent implements OnInit {
           this.posts = data;
           this.posts.sort((a:any, b:any) => { return b.creation_date - a.creation_date});
           this.topicString = this.posts[0].topics[0]
-          this.posts[0].topics.forEach((topic: any) => {
-            if(topic.substr(0,3).toLowerCase() == topic.substr(0,3)){
-              this.topicString = topic
+          this.posts.forEach((post: any) => {
+            if(post.topics.length != 1){
+              post.topics.forEach((topic: any) => {
+                if(topic.substr(0,3).toLowerCase() == this.topic.substr(0,3)){
+                  this.topicString = topic
+                }
+              });
             }
           });
         },

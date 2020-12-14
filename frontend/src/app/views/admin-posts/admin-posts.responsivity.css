@@ -1,0 +1,43 @@
+@media (max-width: 1300px){
+    main{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1050px){
+    main{
+        width: 65%;
+    }
+}
+
+@media (max-width: 950px){
+    main{
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px){
+    section{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    img{
+        margin-bottom: .5rem;
+        margin-right: 0;
+    }
+    button{
+        margin-top: .5rem;
+        margin-left: 0 !important;
+    }
+    section div{
+        flex-direction: column;
+        align-items: center;
+    }
+    section div p:last-of-type{
+        margin-bottom: 0;
+    }
+    h1, h2, p{
+        text-align: center;
+    }
+}

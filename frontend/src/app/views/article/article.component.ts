@@ -62,6 +62,7 @@ export class ArticleComponent implements OnInit {
     arr.forEach((el) => {
       string += "#" + el.toLowerCase() + " "
     })
+    console.log(string)
     return string;
   }
 

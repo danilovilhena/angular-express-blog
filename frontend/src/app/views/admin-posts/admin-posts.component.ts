@@ -5,7 +5,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-admin-posts',
   templateUrl: './admin-posts.component.html',
-  styleUrls: ['./admin-posts.component.css']
+  styleUrls: ['./admin-posts.component.css', './admin-posts.responsivity.css']
 })
 export class AdminPostsComponent implements OnInit {
 
