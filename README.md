@@ -1,27 +1,51 @@
-# WebFinal
+# Trabalho Final de Desenvolvimento Web
+**Autor:** Danilo Pinheiro Vilhena
+**Matrícula:** 1920422
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## Para rodar o projeto:
+### Backend
+~~~
+cd backend/ && npm start
+~~~
+### Frontend
+~~~
+cd frontend/ && ng serve
+~~~
 
-## Development server
+## Usuários para teste:
+**Admin:** admin | 12345
+**Usuário normal:** danilo.vilhena@gmail.com | 123
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Rotas e passos para cada um dos requisitos funcionais do projeto: 
 
-## Code scaffolding
+### Requisito Funcional 01 
+**Descrição:** O sistema deve ser capaz **cadastrar usuários** que poderão realizar postagens no blog.
+**Rota:** /cadastro
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Requisito Funcional 02
+**Descrição:** O sistema deve ser capaz de listar os usuários cadastrados e permitir a **alteração** e a **exclusão** dele; 
+**Exclusão:** No perfil do administrador, ir para a rota /admin/usuarios ou clicar no link usuários do header
+**Alteração:** No perfil do usuário, ir para a rota /editar_perfil ou clicar no ícone do usuário no canto superior direito e depois em configurações
 
-## Build
+### Requisito Funcional 03
+**Descrição:** O sistema deve ser capaz de **criar postagens** para um blog. 
+**Passos:** No perfil do usuário, clicar no ícone do usuário no canto superior direito e depois em escrever um post
+**Rota:** /escrever_post
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Requisito Funcional 04
+**Descrição:** O sistema deve ser capaz de exibir as postagens cadastradas no blog de forma cronológica, da mais recente para a mais antiga. Deve-se utilizar um sistema de paginação quando ele possuir mais do que 10 mensagens na tela
+**Rota:** / ou /inicio
 
-## Running unit tests
+### Requisito Funcional 05
+**Descrição:** O sistema deve ser capaz de exibir a postagem mais recente como destaque na tela principal, exibindo o título, um pequeno resumo e a imagem de forma diferenciada (layout em aberto)
+**Rota:** / ou /inicio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Requisito Funcional 06
+**Descrição:** O sistema deve possuir um menu lateral que organize as postagens por ano e mês de publicação
+**Rota:** / ou /inicio
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Extras
+* Tags de assunto nos posts para poder agrupá-los de acordo com o assunto na página **/assuntos** e no aside da página **/inicio**
+* Mecanismo de busca nessas tags de assunto na página **/assuntos**
+* Mecanismo de busca pelo título dos posts 
+* Funcionalidade de **lembre-se de mim** no login do usuário (salvando o e-mail para as próximas vezes que entrar)
