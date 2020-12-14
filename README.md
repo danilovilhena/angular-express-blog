@@ -33,15 +33,15 @@ cd frontend/ && ng serve
 **Rota:** /escrever_post
 
 ### Requisito Funcional 04
-**Descrição:** O sistema deve ser capaz de exibir as postagens cadastradas no blog de forma cronológica, da mais recente para a mais antiga. Deve-se utilizar um sistema de paginação quando ele possuir mais do que 10 mensagens na tela  
+**Descrição:** O sistema deve ser capaz de exibir as postagens cadastradas no blog de **forma cronológica**, da mais recente para a mais antiga. Deve-se utilizar um sistema de **paginação** quando ele possuir mais do que 10 mensagens na tela  
 **Rota:** / ou /inicio
 
 ### Requisito Funcional 05
-**Descrição:** O sistema deve ser capaz de exibir a postagem mais recente como destaque na tela principal, exibindo o título, um pequeno resumo e a imagem de forma diferenciada (layout em aberto)  
+**Descrição:** O sistema deve ser capaz de exibir a postagem **mais recente como destaque na tela principal**, exibindo o título, um pequeno resumo e a imagem de forma diferenciada (layout em aberto)  
 **Rota:** / ou /inicio
 
 ### Requisito Funcional 06
-**Descrição:** O sistema deve possuir um menu lateral que organize as postagens por ano e mês de publicação  
+**Descrição:** O sistema deve possuir um **menu lateral que organize as postagens por ano e mês de publicação**  
 **Rota:** / ou /inicio
 
 ### Extras

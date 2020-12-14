@@ -1,3 +1,0 @@
-# Verificar a semântica do HTML no final da implementação
-# Verificar a acessibilidade da página
-# Verificar a responsividade
