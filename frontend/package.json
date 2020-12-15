@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "jw-angular-pagination": "^1.2.0",
     "jw-paginate": "^1.0.4",
     "npm": "^6.14.9",
+    "push-dir": "^0.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
