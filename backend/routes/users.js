@@ -2,10 +2,10 @@ const express = require('express')
 const jwt = require('jsonwebtoken')
 const crypto = require('crypto')
 
-var router = express.Router()
-var User = require('../models/user')
-var secret = crypto.randomBytes(20).toString('hex');
-var decodedToken = ''
+let router = express.Router()
+let User = require('../models/user')
+let secret = crypto.randomBytes(20).toString('hex');
+let decodedToken = ''
 
 // Pegar todos os usuários
 router.get('/get', async (req, res) => {
@@ -54,7 +54,7 @@ router.patch('/patch/:id', async (req, res) => {
 
 // Registrar um usuário
 router.post('/register', function(req,res,next) {
-  var user = new User({
+  let user = new User({
     name: req.body.name,
     email: req.body.email,
     password: User.hashPassword(req.body.password),

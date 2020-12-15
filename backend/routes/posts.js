@@ -1,7 +1,7 @@
 const express = require('express')
 
-var router = express.Router()
-var Post = require('../models/post')
+let router = express.Router()
+let Post = require('../models/post')
 
 // Pegar todos os posts
 router.get('/get', async (req, res) => {
@@ -63,7 +63,7 @@ router.delete('/delete/:id', async (req, res) => {
 
 // Criar um post
 router.post('/create', function(req,res,next) {
-  var post = new Post({
+  let post = new Post({
     title: req.body.title,
     description: req.body.description,
     topics: req.body.topics,
@@ -99,10 +99,10 @@ function slugifyStr (str) {
   str = str.replace(/^\s+|\s+$/g, '');
   str = str.toLowerCase();
 
-  var from = "àáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
-  var to = "aaaaaeeeeiiiioooouuuunc------";
+  let from = "àáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  let to = "aaaaaeeeeiiiioooouuuunc------";
 
-  for (var i=0, l=from.length ; i<l ; i++) {
+  for (let i=0, l=from.length ; i<l ; i++) {
       str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
   }
 

@@ -1,7 +1,7 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema
+let mongoose = require('mongoose')
+let Schema = mongoose.Schema
 
-var postSchema = new Schema({
+let postSchema = new Schema({
     title: {type: String, required: true},
     description: {type: String, required: true},
     topics: {type: Array, required: true},
