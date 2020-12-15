@@ -2768,67 +2768,67 @@ class BackendService {
     }
     // User related
     getAllUsers() {
-        return this._http.get('http://localhost:3000/users/get', {
+        return this._http.get('https://vilhena-blog-backend.herokuapp.com/users/get', {
             observe: 'body'
         });
     }
     getUserById(id) {
-        return this._http.get(`http://localhost:3000/users/get_id/${id}`, {
+        return this._http.get(`https://vilhena-blog-backend.herokuapp.com/users/get_id/${id}`, {
             observe: 'body'
         });
     }
     alterUser(id, body) {
-        return this._http.patch(`http://localhost:3000/users/patch/${id}`, body, {
+        return this._http.patch(`https://vilhena-blog-backend.herokuapp.com/users/patch/${id}`, body, {
             observe: 'body'
         });
     }
     removeUser(id) {
-        return this._http.delete(`http://localhost:3000/users/delete/${id}`);
+        return this._http.delete(`https://vilhena-blog-backend.herokuapp.com/users/delete/${id}`);
     }
     registerUser(body) {
-        return this._http.post('http://localhost:3000/users/register', body, {
+        return this._http.post('https://vilhena-blog-backend.herokuapp.com/users/register', body, {
             observe: 'body'
         });
     }
     loginUser(body) {
-        return this._http.post('http://localhost:3000/users/login', body, {
+        return this._http.post('https://vilhena-blog-backend.herokuapp.com/users/login', body, {
             observe: 'body'
         });
     }
     getUser() {
-        return this._http.get('http://localhost:3000/users/user', {
+        return this._http.get('https://vilhena-blog-backend.herokuapp.com/users/user', {
             observe: 'body',
             params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]().append("token", localStorage.getItem("token"))
         });
     }
     // Post related
     createPost(body) {
-        return this._http.post('http://localhost:3000/posts/create', body, {
+        return this._http.post('https://vilhena-blog-backend.herokuapp.com/posts/create', body, {
             observe: 'body'
         });
     }
     getAllPosts() {
-        return this._http.get('http://localhost:3000/posts/get', {
+        return this._http.get('https://vilhena-blog-backend.herokuapp.com/posts/get', {
             observe: 'body'
         });
     }
     getPostsByAuthor(id) {
-        return this._http.get(`http://localhost:3000/posts/author/${id}`, {
+        return this._http.get(`https://vilhena-blog-backend.herokuapp.com/posts/author/${id}`, {
             observe: 'body'
         });
     }
     getPostsByTopic(topic) {
-        return this._http.get(`http://localhost:3000/posts/topic/${topic}`, {
+        return this._http.get(`https://vilhena-blog-backend.herokuapp.com/posts/topic/${topic}`, {
             observe: 'body'
         });
     }
     getPostById(id) {
-        return this._http.get(`http://localhost:3000/posts/post/${id}`, {
+        return this._http.get(`https://vilhena-blog-backend.herokuapp.com/posts/post/${id}`, {
             observe: 'body'
         });
     }
     removePost(id) {
-        return this._http.delete(`http://localhost:3000/posts/delete/${id}`);
+        return this._http.delete(`https://vilhena-blog-backend.herokuapp.com/posts/delete/${id}`);
     }
 }
 BackendService.ɵfac = function BackendService_Factory(t) { return new (t || BackendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
