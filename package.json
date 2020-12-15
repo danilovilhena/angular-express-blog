@@ -1,0 +1,19 @@
+{
+  "name": "web-final",
+  "version": "1.0.0",
+  "description": "A blog application using Angular for the frontend part and Node.js + Express for the backend. ## To run the project: ### Backend ~~~ cd backend/ && npm start ~~~ ### Frontend ~~~ cd frontend/ && ng serve ~~~",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start && cd ../frontend && ng serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilovilhena/angular-express-blog.git"
+  },
+  "author": "Danilo Vilhena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilovilhena/angular-express-blog/issues"
+  },
+  "homepage": "https://github.com/danilovilhena/angular-express-blog#readme"
+}
