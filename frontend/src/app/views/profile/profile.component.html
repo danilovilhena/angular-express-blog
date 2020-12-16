@@ -34,7 +34,7 @@
                 <p>{{splitFirstParagraph(post.description)}}</p>
                 <div class="d-flex flex-row align-self-end" style="margin-top: auto;">
                     <a [routerLink]="['/post', post._id]" class="mr-3">Ver mais</a>
-                    <a href="/perfil" class="text-danger" (click)="removePost(post._id)"> Excluir post</a>
+                    <a routerLink="/perfil" class="text-danger" (click)="removePost(post._id)"> Excluir post</a>
                 </div>
             </div>
         </article>
