@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   user: any;
 
-  isHome = document.location.pathname == '/angular-express-blog/';
+  isHome = document.location.pathname == '/';
   isAbout = document.location.pathname.includes('sobre');
   isTopics = document.location.pathname.includes('assunto');
   loggedIn = false;
