@@ -2,9 +2,9 @@
 
 A blog application using Angular for the frontend part and Node.js + Express for the backend.
 
-## To see the builded project go to:
+## To see the project on the web go to:
 https://danilovilhena.github.io/angular-express-blog/  
-## To run the project locally clone the branch "local":
+## To run the project, clone the branch "local" and execute the following:
 ### Backend
 ~~~
 cd backend/ && npm start
