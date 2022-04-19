@@ -92,7 +92,7 @@ router.post('/login', function(req, res, next) {
         return res.status(501).json({message: "Credenciais inválidas."})
       }
     } else {
-      return res.status(501).json({message: "E-mail não cadastrado."})
+      return res.status(501).json({message: "Credenciais inválidas."})
     }
   })
 
